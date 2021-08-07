@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './prolife-logo.jpeg';
 import './App.css';
 
 function App() {
@@ -53,6 +53,9 @@ function App() {
         </label>
         <input type="submit" value="Submit" />
       </form>
+      <div className='stats'>
+        Total 200 persons have done the oath
+      </div>
       </header>
     </div>
   );
