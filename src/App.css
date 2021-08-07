@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+
+.oath {
+  font-size: 20px;
+  width: 40%;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  align-items: flex-end;
+}
+
+.main-form label {
+  padding: 20px;
+}
