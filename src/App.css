@@ -8,7 +8,6 @@
   padding-top: 50px;
 }
 
-
 .App-header {
   background-color: #000;
   min-height: 100vh;
@@ -33,10 +32,10 @@
   }
 }
 
-
 .oath {
   font-size: 20px;
-  width: 40%;
+  width: 80%;
+  max-width: 650px;
 }
 
 .main-form {
@@ -53,5 +52,4 @@
 .stats {
   font-size: 20px;
   padding: 20px;
-
 }
