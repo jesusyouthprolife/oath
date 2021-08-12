@@ -25,7 +25,7 @@ function App() {
           onSubmit={(e) => {
             e.preventDefault();
             sendFeedback({
-              name: "",
+              name: "Test",
             })
               .then(() => {
                 alert("Submitted!");
