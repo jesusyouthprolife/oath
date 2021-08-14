@@ -24,7 +24,7 @@ function Pledge({ goNextPage }) {
     region: "",
   });
 
-  const [{ scale, opacity }] = useSpring(() => ({
+  const [{ scale, opacity }, set] = useSpring(() => ({
     // https://react-spring.io/common/props#props
     from: { scale: 0.6, opacity: 1 },
     to: { scale: 2, opacity: 0 },
@@ -67,7 +67,15 @@ function Pledge({ goNextPage }) {
               sendFeedback(formValues)
                 .then(() => {
                   setLoading(false);
-                  goNextPage();
+                  set({
+                    onRest: () => {
+                      goNextPage();
+                    },
+                    config: config.default,
+                    delay: 0,
+                    from: { scale: 0, opacity: 1 },
+                    to: { scale: 50, opacity: 1 },
+                  });
                 })
                 .catch(() => {
                   alert("Something went wrong, please try again!");
@@ -80,7 +88,7 @@ function Pledge({ goNextPage }) {
                 Name:
                 <input
                   value={formValues.name}
-                  required
+                  // required
                   type="text"
                   onChange={(e) => setField("name", e.target.value)}
                 />
@@ -89,8 +97,8 @@ function Pledge({ goNextPage }) {
                 Email:
                 <input
                   value={formValues.email}
-                  required
-                  type="email"
+                  // required
+                  // type="email"
                   onChange={(e) => setField("email", e.target.value)}
                 />
               </label>
