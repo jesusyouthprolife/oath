@@ -4,7 +4,7 @@ function Done({signCount}) {
   return (
     <div className="done-page">
       <Layout
-        left={<div className="circle"></div>}
+        left={<div className="circle done"></div>}
         right={
           <>
             <p className="heading-text">Thank you for standing up for life!</p>
