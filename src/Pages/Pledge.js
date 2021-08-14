@@ -48,26 +48,22 @@ function Pledge({ goNextPage }) {
               </label>
             </div>
             <div className="main-form-bottom">
-              <div className="main-form-bottom-left">
-                <label>
-                  WhatsApp:
-                  <input type="text" name="name" />
-                </label>
-                <label>
-                  Mobile:
-                  <input type="text" name="name" />
-                </label>
-              </div>
-              <div className="main-form-bottom-right">
-                <label>
-                  State:
-                  <input type="text" name="name" />
-                </label>
-                <label>
-                  Country:
-                  <input type="text" name="name" />
-                </label>
-              </div>
+              <label>
+                Mobile:
+                <input type="text" name="name" />
+              </label>
+              <label>
+                WhatsApp:
+                <input type="text" name="name" />
+              </label>
+              <label>
+                Country:
+                <input type="text" name="name" />
+              </label>
+              <label>
+                State:
+                <input type="text" name="name" />
+              </label>
             </div>
           </form>
           <button onClick={goNextPage}>Sign</button>
