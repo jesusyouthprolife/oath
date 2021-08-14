@@ -1,6 +1,18 @@
 import Layout from "../Components/Layout";
+import { animated, useSpring, config } from "react-spring";
 
 function Home({ goNextPage }) {
+  const [{ scale, opacity }] = useSpring(() => ({
+    // https://react-spring.io/common/props#props
+    from: { scale: 0.6, opacity: 0.3 },
+    to: { scale: 2, opacity: 0 },
+    loop: true,
+    delay: 200,
+    config: config.molasses,
+  }));
+
+  const transform = (e) => `scale(${e})`;
+
   return (
     <Layout
       left={<div className="circle"></div>}
@@ -19,8 +31,30 @@ function Home({ goNextPage }) {
             publishing software like Aldus PageMaker including versions of Lorem
             Ipsum.
           </p>
-          <button className="home-button" onClick={goNextPage}>
-            Take the pledge
+          <button
+            type="submit"
+            style={{
+              position: "relative",
+              zIndex: 2,
+            }}
+            onClick={goNextPage}
+            className="home-button"
+          >
+            <span style={{ zIndex: 5 }}>Take the pledge</span>
+            <animated.div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                transform: scale.to(transform),
+                backgroundColor: "white",
+                width: "100%",
+                height: "100%",
+                borderRadius: "50px",
+                zIndex: 1,
+                opacity,
+              }}
+            />
           </button>
         </>
       }

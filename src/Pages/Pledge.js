@@ -5,6 +5,7 @@ import { css } from "@emotion/react";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { animated, useSpring, config } from "react-spring";
 
 const override = css`
   width: 10px;
@@ -23,9 +24,20 @@ function Pledge({ goNextPage }) {
     region: "",
   });
 
+  const [{ scale, opacity }] = useSpring(() => ({
+    // https://react-spring.io/common/props#props
+    from: { scale: 0.6, opacity: 1 },
+    to: { scale: 2, opacity: 0 },
+    loop: true,
+    delay: 200,
+    config: config.molasses,
+  }));
+
   const setField = (key, value) => {
     setFormValues({ ...formValues, [key]: value });
   };
+
+  const transform = (e) => `scale(${e})`;
 
   return (
     <Layout
@@ -117,8 +129,29 @@ function Pledge({ goNextPage }) {
               </label>
             </div>
             <div>
-              <button type="submit" className="pledge-button">
-                Sign
+              <button
+                type="submit"
+                style={{
+                  position: "relative",
+                  zIndex: 2,
+                }}
+                className="pledge-button"
+              >
+                <span style={{ zIndex: 5 }}>Sign</span>
+                <animated.div
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    transform: scale.to(transform),
+                    backgroundColor: "white",
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "50px",
+                    zIndex: 1,
+                    opacity,
+                  }}
+                />
               </button>
               {loading && (
                 <ClipLoader
