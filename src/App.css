@@ -67,6 +67,10 @@
   display: flex;
   flex-direction: column;
 }
+.main-form-bottom label:nth-child(4),
+.main-form-bottom label:nth-child(2) {
+  margin-left: 10px;
+}
 
 .main-form input {
   height: 29px;
@@ -84,5 +88,10 @@
 
   .main-form-bottom {
     display: unset;
+  }
+
+  .main-form-bottom label:nth-child(4),
+  .main-form-bottom label:nth-child(2) {
+    margin-left: 0px;
   }
 }
