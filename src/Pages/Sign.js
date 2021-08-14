@@ -76,7 +76,7 @@ function Sign({ goNextPage }) {
           >
             <div className="main-form-top">
               <label>
-                Name:
+              <span>Name <i>(required)</i></span>
                 <input
                   value={formValues.name}
                   required
@@ -85,7 +85,7 @@ function Sign({ goNextPage }) {
                 />
               </label>
               <label>
-                Email:
+                <span>Email <i>(required)</i></span>
                 <input
                   value={formValues.email}
                   required
@@ -96,7 +96,7 @@ function Sign({ goNextPage }) {
             </div>
             <div className="main-form-bottom">
               <label>
-                Phone:
+                Phone
                 <PhoneInput
                   inputProps={{name: "phone"}}
                   value={formValues.phone}
@@ -105,7 +105,7 @@ function Sign({ goNextPage }) {
                 />
               </label>
               <label>
-                WhatsApp:
+                WhatsApp
                 <PhoneInput
                   inputProps={{name: "whatsapp"}}
                   country={"in"}
@@ -113,7 +113,7 @@ function Sign({ goNextPage }) {
                 />
               </label>
               <label>
-                Country:
+                Country
                 <input
                   value={formValues.country}
                   type="text"
@@ -121,7 +121,7 @@ function Sign({ goNextPage }) {
                 />
               </label>
               <label>
-                Region:
+                Region
                 <input
                   value={formValues.region}
                   type="text"
