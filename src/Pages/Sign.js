@@ -79,7 +79,7 @@ function Sign({ goNextPage }) {
                 Name:
                 <input
                   value={formValues.name}
-                  // required
+                  required
                   type="text"
                   onChange={(e) => setField("name", e.target.value)}
                 />
@@ -88,7 +88,7 @@ function Sign({ goNextPage }) {
                 Email:
                 <input
                   value={formValues.email}
-                  // required
+                  required
                   type="email"
                   onChange={(e) => setField("email", e.target.value)}
                 />
