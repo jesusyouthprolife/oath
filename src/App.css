@@ -40,11 +40,14 @@
   margin: 0px;
   font-family: "Atkinson Hyperlegible", sans-serif;
 }
+.left .content-text {
+  margin-right: 20px;
+}
 .content-text {
   color: white;
   padding: 0px;
   font-family: "Lato", sans-serif;
-  margin-right: 10px;
+  font-size: 20px;
 }
 
 .circle {
@@ -97,6 +100,13 @@
 
   .main-form-bottom {
     display: unset;
+  }
+  .content-text {
+    font-size: 18px;
+  }
+
+  .left .content-text {
+    margin-right: 0px;
   }
 
   .main-form-bottom label:nth-child(4),
