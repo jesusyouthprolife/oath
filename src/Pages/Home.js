@@ -7,7 +7,7 @@ function Home({ goNextPage }) {
       right={
         <>
           <p className="heading-text">#neverforgotten</p>
-          <p>
+          <p className="content-text">
             What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
             printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown
