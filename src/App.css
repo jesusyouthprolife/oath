@@ -115,3 +115,19 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.done-page .container {
+  background-color: white;
+}
+.done-page .heading-text {
+  color: black;
+}
+.done-page .content-text {
+  color: black;
+}
+.done-page .circle {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}
