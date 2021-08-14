@@ -42,8 +42,10 @@ function Pledge({ goNextPage }) {
   return (
     <Layout
       left={
-        <p className="content-text">
-          {`As a member of the human race, the Crown of God's creation, I 
+        <>
+          <p className="heading-text">The Prolife Oath</p>
+          <p className="content-text">
+            {`As a member of the human race, the Crown of God's creation, I 
           ${
             formValues.name || `(full name)`
           } solemnly pledge my life to the service of God and humanity; I will
@@ -55,7 +57,8 @@ function Pledge({ goNextPage }) {
           permit the evils of contraception, sterilisation, abortion, artificial
           reproductive technology & euthanasia; I make these promises solemnly,
           freely, and upon my honour.`}
-        </p>
+          </p>
+        </>
       }
       right={
         <>
