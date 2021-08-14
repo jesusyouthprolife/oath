@@ -1,3 +1,11 @@
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var requestOptions = {
+  headers: myHeaders,
+  redirect: "follow",
+};
+
 export const sendFeedback = ({
   name,
   email,
@@ -6,9 +14,6 @@ export const sendFeedback = ({
   country,
   region,
 }) => {
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-
   var raw = JSON.stringify({
     name,
     email,
@@ -18,14 +23,25 @@ export const sendFeedback = ({
     region,
   });
 
-  var requestOptions = {
+  var postRequestOptions = {
     method: "POST",
-    headers: myHeaders,
     body: raw,
-    redirect: "follow",
+    ...requestOptions,
   };
 
-  return fetch("https://www.prolifearmy.org/api/web/oath", requestOptions).then(
-    (response) => response.text()
-  );
+  return fetch(
+    "https://www.prolifearmy.org/api/web/oath",
+    postRequestOptions
+  ).then((response) => response.text());
+};
+
+export const getSignCount = (callback) => {
+  var getRequestOptions = {
+    method: "GET",
+    ...requestOptions,
+  };
+
+  fetch("https://www.prolifearmy.org/api/web/oath", getRequestOptions)
+    .then((response) => response.json())
+    .then(({ count }) => callback(count));
 };

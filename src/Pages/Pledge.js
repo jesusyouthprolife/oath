@@ -26,7 +26,7 @@ function Pledge({ goNextPage }) {
 
   const [{ scale, opacity }, set] = useSpring(() => ({
     // https://react-spring.io/common/props#props
-    from: { scale: 0.6, opacity: 1 },
+    from: { scale: 1, opacity: 0.3 },
     to: { scale: 2, opacity: 0 },
     loop: true,
     delay: 200,
@@ -36,6 +36,11 @@ function Pledge({ goNextPage }) {
   const setField = (key, value) => {
     setFormValues({ ...formValues, [key]: value });
   };
+
+  const setWhatsappDefault = (value) => {
+    // const whatsappInput = document.querySelector("input[name=whatsapp]");
+    // if (whatsappInput.value === "+91") whatsappInput.value = value;
+  }
 
   const transform = (e) => `scale(${e})`;
 
@@ -49,7 +54,7 @@ function Pledge({ goNextPage }) {
           ${
             formValues.name || `(full name)`
           } solemnly pledge my life to the service of God and humanity; I will
-          obey the Word ofGod and live in accordance with the Magisterial
+          obey the Word of God and live in accordance with the Magisterial
           teachings of the Catholic Church; I will lead my life according to
           God's wonderful plan about love, sexuality, celibacy, marriage, family
           & human life; I will maintain the utmost respect for human life from
@@ -110,14 +115,16 @@ function Pledge({ goNextPage }) {
               <label>
                 Phone:
                 <PhoneInput
+                  inputProps={{name: "phone"}}
                   value={formValues.phone}
                   country={"in"}
-                  onChange={(phone) => setField("phone", phone)}
+                  onChange={(phone) => { setWhatsappDefault(phone); setField("phone", phone); }}
                 />
               </label>
               <label>
                 WhatsApp:
                 <PhoneInput
+                  inputProps={{name: "whatsapp"}}
                   country={"in"}
                   onChange={(phone) => setField("whatsapp", phone)}
                 />
@@ -148,7 +155,7 @@ function Pledge({ goNextPage }) {
                 }}
                 className="pledge-button"
               >
-                <span style={{ zIndex: 5 }}>Sign</span>
+                <span style={{ zIndex: 5 }}>Sign </span>
                 <animated.div
                   style={{
                     position: "absolute",

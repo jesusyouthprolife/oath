@@ -4,7 +4,7 @@ import { animated, useSpring, config } from "react-spring";
 function Home({ goNextPage }) {
   const [{ scale, opacity }] = useSpring(() => ({
     // https://react-spring.io/common/props#props
-    from: { scale: 0.6, opacity: 0.3 },
+    from: { scale: 1, opacity: 0.3 },
     to: { scale: 2, opacity: 0 },
     loop: true,
     delay: 200,
@@ -20,8 +20,8 @@ function Home({ goNextPage }) {
         <>
           <p className="heading-text">15.6 MILLION</p>
           <p className="content-text">
-            That's the number of unborns aborted every year, in India alone,
-            since the introduction of the MTP act in 1971. They deserve a chance
+            That's the number of unborns aborted, in India alone, every year. 
+            They deserve a chance
             to live and the change starts with you. Your prayers and actions go
             a long way in bringing in a change and promoting a culture of life.
             Take the prolife oath today to get started.
@@ -35,7 +35,7 @@ function Home({ goNextPage }) {
             onClick={goNextPage}
             className="home-button"
           >
-            <span style={{ zIndex: 5 }}>Take the pledge</span>
+            <span style={{ zIndex: 5 }}>Take the oath</span>
             <animated.div
               style={{
                 position: "absolute",

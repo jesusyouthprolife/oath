@@ -7,6 +7,18 @@
   }
 }
 
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  color: #C8C8C8;
+}
+
+input, button, .form-control {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
 .container {
   background-color: black;
   width: 100%;
@@ -36,8 +48,11 @@
   display: flex;
   display: flex;
   flex-direction: column;
+  flex-shrink: 1;
+  flex-grow: 1;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  padding-right: 24px;
 }
 
 .right {
@@ -45,24 +60,27 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  flex-shrink: 1;
+  flex-grow: 1;
   justify-content: center;
   align-items: flex-start;
 }
 
 .heading-text {
   font-size: 48px;
+  line-height: 100%;
   color: white;
-  margin: 0px;
-  font-family: "Atkinson Hyperlegible", sans-serif;
+  margin: 0px 0px 12px;
+  font-family: "Playfair Display", sans-serif;
+  text-align: left;
+  width: 100%;
 }
 .left .content-text {
   margin-right: 20px;
 }
 .content-text {
-  color: white;
   padding: 0px;
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
+  margin: 8px 0px;
 }
 
 .circle {
@@ -78,6 +96,10 @@
   width: 100%;
 }
 
+.main-form-top input {
+  font-size: 20px;
+}
+
 .main-form-bottom {
   width: 100%;
   display: grid;
@@ -85,11 +107,11 @@
 }
 
 .main-form label {
-  color: white;
   display: flex;
   flex-direction: column;
-  font-family: "Lato", sans-serif;
+  margin: 12px 0px 0px;
 }
+
 .main-form-bottom label:nth-child(4),
 .main-form-bottom label:nth-child(2) {
   margin-left: 10px;
@@ -97,11 +119,11 @@
 
 .main-form input {
   height: 29px;
-  margin: 10px 0px;
+  margin-top: 4px;
 }
 
 .main-form .react-tel-input {
-  margin: 10px 0px;
+  margin-top: 4px;
 }
 
 .main-form .react-tel-input .form-control {
@@ -109,7 +131,7 @@
   border-radius: 1px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .container {
     height: auto;
     min-height: 100vh;
@@ -125,7 +147,7 @@
   .main-form-bottom {
     display: unset;
   }
-  .content-text {
+  .content-text, input, label {
     font-size: 18px;
   }
 
@@ -139,7 +161,7 @@
     margin-left: 0px;
   }
   .heading-text {
-    font-size: 22px;
+    font-size: 24px;
     margin-top: 50px;
   }
   .home-button,
@@ -148,30 +170,27 @@
   }
 }
 
+button {
+  text-transform: uppercase;
+  padding: 10px 32px;
+  margin-top: 20px;
+  border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 4px;
+
+}
+
 .home-button {
   background: black;
-  padding: 10px 26px;
-  border: 5px solid white;
-  border-radius: 50px;
   color: white;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: "Lato", sans-serif;
-  margin-top: 10px;
-  font-size: 36px;
 }
 
 .pledge-button {
   background: white;
-  border-radius: 50px;
-  border: 0px;
   color: black;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: "Lato", sans-serif;
-  margin-top: 10px;
-  font-size: 36px;
-  padding: 10px 26px;
 }
 
 .done-page .container {
