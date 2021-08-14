@@ -29,9 +29,11 @@
 .heading-text {
   font-size: 40px;
   color: white;
+  margin: 0px;
 }
 .content-text {
   color: white;
+  padding: 0px;
 }
 
 .circle {
