@@ -12,6 +12,7 @@
   height: 90%;
   display: flex;
   max-width: 1000px;
+  margin: 50px 0px;
 }
 
 .left {
@@ -83,6 +84,7 @@
 @media only screen and (max-width: 600px) {
   .container {
     height: auto;
+    min-height: 100vh;
   }
   .content {
     flex-direction: column;
@@ -99,6 +101,13 @@
   .main-form-bottom label:nth-child(4),
   .main-form-bottom label:nth-child(2) {
     margin-left: 0px;
+  }
+  .heading-text {
+    font-size: 22px;
+    margin-top: 50px;
+  }
+  .home-button {
+    font-size: 16px !important;
   }
 }
 
