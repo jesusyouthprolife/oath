@@ -3,6 +3,8 @@ import { sendFeedback } from "../api";
 import ClipLoader from "react-spinners/ClipLoader";
 import { css } from "@emotion/react";
 import { useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const override = css`
   width: 10px;
@@ -81,18 +83,17 @@ function Pledge({ goNextPage }) {
             <div className="main-form-bottom">
               <label>
                 Phone:
-                <input
+                <PhoneInput
                   value={formValues.phone}
-                  type="text"
-                  onChange={(e) => setField("phone", e.target.value)}
+                  country={"in"}
+                  onChange={(phone) => setField("phone", phone)}
                 />
               </label>
               <label>
                 WhatsApp:
-                <input
-                  value={formValues.whatsapp}
-                  type="text"
-                  onChange={(e) => setField("whatsapp", e.target.value)}
+                <PhoneInput
+                  country={"in"}
+                  onChange={(phone) => setField("whatsapp", phone)}
                 />
               </label>
               <label>
