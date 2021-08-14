@@ -19,7 +19,9 @@ function Home({ goNextPage }) {
             publishing software like Aldus PageMaker including versions of Lorem
             Ipsum.
           </p>
-          <button onClick={goNextPage}>Take the pledge</button>
+          <button className="home-button" onClick={goNextPage}>
+            Take the pledge
+          </button>
         </>
       }
     />

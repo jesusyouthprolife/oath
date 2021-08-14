@@ -79,7 +79,9 @@ function Pledge({ goNextPage }) {
               </label>
             </div>
             <div>
-              <button type="submit">Sign</button>
+              <button type="submit" className="pledge-button">
+                Sign
+              </button>
               {loading && (
                 <ClipLoader
                   color={"#fff"}

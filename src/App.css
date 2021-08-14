@@ -95,3 +95,23 @@
     margin-left: 0px;
   }
 }
+
+.home-button {
+  background: black;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pledge-button {
+  background: white;
+  padding: 10px;
+  border-radius: 50px;
+  border: 0px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
