@@ -1,13 +1,8 @@
 import "./App.css";
-import Layout from "./Components/Layout";
+import Home from "./Pages/Home";
 
 function App() {
-  return (
-    <Layout
-      left={<div className="circle"></div>}
-      right={<p className="heading-text">#neverforgotten</p>}
-    />
-  );
+  return <Home />;
 }
 
 export default App;
