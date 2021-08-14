@@ -22,7 +22,6 @@ function Pledge({ goNextPage }) {
       }
       right={
         <>
-          <p className="heading-text">Pledge</p>
           <form
             className="main-form"
             onSubmit={(e) => {
@@ -38,7 +37,7 @@ function Pledge({ goNextPage }) {
                 });
             }}
           >
-            <div>
+            <div className="main-form-top">
               <label>
                 Name:
                 <input required type="text" name="name" />
@@ -48,8 +47,8 @@ function Pledge({ goNextPage }) {
                 <input required type="text" name="email" />
               </label>
             </div>
-            <div>
-              <div>
+            <div className="main-form-bottom">
+              <div className="main-form-bottom-left">
                 <label>
                   WhatsApp:
                   <input type="text" name="name" />
@@ -59,7 +58,7 @@ function Pledge({ goNextPage }) {
                   <input type="text" name="name" />
                 </label>
               </div>
-              <div>
+              <div className="main-form-bottom-right">
                 <label>
                   State:
                   <input type="text" name="name" />
