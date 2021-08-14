@@ -12,6 +12,19 @@ const override = css`
 
 function Pledge({ goNextPage }) {
   const [loading, setLoading] = useState(false);
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    whatsapp: "",
+    country: "",
+    region: "",
+  });
+
+  const setField = (key, value) => {
+    setFormValues({ ...formValues, [key]: value });
+  };
+
   return (
     <Layout
       left={
@@ -37,9 +50,7 @@ function Pledge({ goNextPage }) {
             onSubmit={(e) => {
               setLoading(true);
               e.preventDefault();
-              sendFeedback({
-                name: "Test",
-              })
+              sendFeedback(formValues)
                 .then(() => {
                   setLoading(false);
                   goNextPage();
@@ -53,29 +64,55 @@ function Pledge({ goNextPage }) {
             <div className="main-form-top">
               <label>
                 Name:
-                <input required type="text" name="name" />
+                <input
+                  value={formValues.name}
+                  required
+                  type="text"
+                  onChange={(e) => setField("name", e.target.value)}
+                />
               </label>
               <label>
                 Email:
-                <input required type="text" name="email" />
+                <input
+                  value={formValues.email}
+                  required
+                  type="text"
+                  onChange={(e) => setField("email", e.target.value)}
+                />
               </label>
             </div>
             <div className="main-form-bottom">
               <label>
-                Mobile:
-                <input type="text" name="name" />
+                Phone:
+                <input
+                  value={formValues.phone}
+                  type="text"
+                  onChange={(e) => setField("phone", e.target.value)}
+                />
               </label>
               <label>
                 WhatsApp:
-                <input type="text" name="name" />
+                <input
+                  value={formValues.whatsapp}
+                  type="text"
+                  onChange={(e) => setField("whatsapp", e.target.value)}
+                />
               </label>
               <label>
                 Country:
-                <input type="text" name="name" />
+                <input
+                  value={formValues.country}
+                  type="text"
+                  onChange={(e) => setField("country", e.target.value)}
+                />
               </label>
               <label>
-                State:
-                <input type="text" name="name" />
+                Region:
+                <input
+                  value={formValues.region}
+                  type="text"
+                  onChange={(e) => setField("region", e.target.value)}
+                />
               </label>
             </div>
             <div>
