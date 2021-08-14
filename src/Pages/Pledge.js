@@ -31,15 +31,18 @@ function Pledge({ goNextPage }) {
     <Layout
       left={
         <p className="content-text">
-          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived
-          not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum.
+          {`As a member of the human race, the Crown of God's creation, I 
+          ${
+            formValues.name || `(full name)`
+          } solemnly pledge my life to the service of God and humanity; I will
+          obey the Word ofGod and live in accordance with the Magisterial
+          teachings of the Catholic Church; I will lead my life according to
+          God's wonderful plan about love, sexuality, celibacy, marriage, family
+          & human life; I will maintain the utmost respect for human life from
+          the time of conception till natural death; In my capacity I will not
+          permit the evils of contraception, sterilisation, abortion, artificial
+          reproductive technology & euthanasia; I make these promises solemnly,
+          freely, and upon my honour.`}
         </p>
       }
       right={
