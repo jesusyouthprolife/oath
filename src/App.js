@@ -1,17 +1,12 @@
 import "./App.css";
+import Layout from "./Layout";
 
 function App() {
   return (
-    <div className="container">
-      <div className="content">
-        <div className="left">
-          <div className="circle"></div>
-        </div>
-        <div className="right">
-          <p className="heading-text">#neverforgotten</p>
-        </div>
-      </div>
-    </div>
+    <Layout
+      left={<div className="circle"></div>}
+      right={<p className="heading-text">#neverforgotten</p>}
+    />
   );
 }
 
