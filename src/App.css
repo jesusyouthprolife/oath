@@ -34,7 +34,7 @@
 }
 
 .heading-text {
-  font-size: 40px;
+  font-size: 48px;
   color: white;
   margin: 0px;
   font-family: "Atkinson Hyperlegible", sans-serif;
@@ -81,6 +81,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .container {
+    height: auto;
+  }
   .content {
     flex-direction: column;
   }
@@ -101,13 +104,15 @@
 
 .home-button {
   background: black;
-  padding: 10px;
-  border: 2px solid white;
+  padding: 10px 26px;
+  border: 5px solid white;
   border-radius: 50px;
   color: white;
   font-weight: bold;
   cursor: pointer;
   font-family: "Lato", sans-serif;
+  margin-top: 10px;
+  font-size: 36px;
 }
 
 .pledge-button {
