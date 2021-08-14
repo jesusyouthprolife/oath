@@ -1,7 +1,17 @@
 import Layout from "../Components/Layout";
 import { sendFeedback } from "../api";
+import ClipLoader from "react-spinners/ClipLoader";
+import { css } from "@emotion/react";
+import { useState } from "react";
+
+const override = css`
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+`;
 
 function Pledge({ goNextPage }) {
+  const [loading, setLoading] = useState(false);
   return (
     <Layout
       left={
@@ -25,15 +35,18 @@ function Pledge({ goNextPage }) {
           <form
             className="main-form"
             onSubmit={(e) => {
+              setLoading(true);
               e.preventDefault();
               sendFeedback({
                 name: "Test",
               })
                 .then(() => {
-                  alert("Submitted!");
+                  setLoading(false);
+                  goNextPage();
                 })
                 .catch(() => {
                   alert("Failed!");
+                  setLoading(false);
                 });
             }}
           >
@@ -65,8 +78,18 @@ function Pledge({ goNextPage }) {
                 <input type="text" name="name" />
               </label>
             </div>
+            <div>
+              <button type="submit">Sign</button>
+              {loading && (
+                <ClipLoader
+                  color={"#fff"}
+                  loading={true}
+                  size={150}
+                  css={override}
+                />
+              )}
+            </div>
           </form>
-          <button onClick={goNextPage}>Sign</button>
         </>
       }
     />
