@@ -75,7 +75,7 @@ function Pledge({ goNextPage }) {
                 <input
                   value={formValues.email}
                   required
-                  type="text"
+                  type="email"
                   onChange={(e) => setField("email", e.target.value)}
                 />
               </label>
