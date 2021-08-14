@@ -45,7 +45,7 @@ function Pledge({ goNextPage }) {
                   goNextPage();
                 })
                 .catch(() => {
-                  alert("Failed!");
+                  alert("Something went wrong, please try again!");
                   setLoading(false);
                 });
             }}
