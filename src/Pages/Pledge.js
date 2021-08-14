@@ -38,31 +38,38 @@ function Pledge({ goNextPage }) {
                 });
             }}
           >
-            <label>
-              Name:
-              <input required type="text" name="name" />
-            </label>
-            <label>
-              Email:
-              <input required type="text" name="email" />
-            </label>
-            <label>
-              WhatsApp:
-              <input type="text" name="name" />
-            </label>
-            <label>
-              Mobile:
-              <input type="text" name="name" />
-            </label>
-
-            <label>
-              State:
-              <input type="text" name="name" />
-            </label>
-            <label>
-              Country:
-              <input type="text" name="name" />
-            </label>
+            <div>
+              <label>
+                Name:
+                <input required type="text" name="name" />
+              </label>
+              <label>
+                Email:
+                <input required type="text" name="email" />
+              </label>
+            </div>
+            <div>
+              <div>
+                <label>
+                  WhatsApp:
+                  <input type="text" name="name" />
+                </label>
+                <label>
+                  Mobile:
+                  <input type="text" name="name" />
+                </label>
+              </div>
+              <div>
+                <label>
+                  State:
+                  <input type="text" name="name" />
+                </label>
+                <label>
+                  Country:
+                  <input type="text" name="name" />
+                </label>
+              </div>
+            </div>
           </form>
           <button onClick={goNextPage}>Sign</button>
         </>

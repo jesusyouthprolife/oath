@@ -55,6 +55,17 @@
   flex-direction: column;
 }
 
+.main-form label {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-form input {
+  height: 29px;
+  margin: 10px 0px;
+}
+
 @media only screen and (max-width: 600px) {
   .content {
     flex-direction: column;
