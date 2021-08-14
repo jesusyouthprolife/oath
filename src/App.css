@@ -39,3 +39,8 @@
   width: 200px;
   height: 200px;
 }
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+}
