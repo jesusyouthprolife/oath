@@ -274,8 +274,9 @@ button {
 }
 
 .done-button {
-  color: white;
-  background: black;
+  background: white;
+  color: black;
+  border-color: black;
 }
 
 .done-page .container {

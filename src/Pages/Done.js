@@ -33,7 +33,7 @@ function Done({ signCount }) {
                 }}
                 className="done-button"
               >
-                {isCopied ? "Link copied" : "Copy link"}
+                {isCopied ? "Link copied!" : "Copy link"}
               </button>
             </CopyToClipboard>
           </>
