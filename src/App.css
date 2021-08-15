@@ -233,8 +233,7 @@ small {
   .heading-text {
     font-size: 42px;
   }
-  .home-button,
-  .pledge-button {
+  button {
     font-size: 16px !important;
   }
 

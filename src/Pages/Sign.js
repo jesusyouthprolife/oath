@@ -83,12 +83,12 @@ function Sign({ goNextPage }) {
             }}
           >
             <div className="main-form-top">
-              <label>Signed by:
+              <label>Signed by
                 <input
                   id="name"
                   value={formValues.name}
                   type="text"
-                  placeholder="Type your name here"
+                  placeholder="Type your name"
                   required
                   class="heading-text"
                   onChange={(e) => setField("name", e.target.value)}
