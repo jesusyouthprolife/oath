@@ -262,12 +262,13 @@ button {
   letter-spacing: 2px;
 }
 
-.home-button {
+.home-button,
+.pledge-button {
   background: black;
   color: white;
 }
 
-.pledge-button {
+.sign-button {
   background: white;
   color: black;
 }

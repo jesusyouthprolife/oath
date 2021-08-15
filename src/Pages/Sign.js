@@ -146,7 +146,7 @@ function Sign({ goNextPage }) {
                 style={{
                   position: "relative",
                 }}
-                className="pledge-button"
+                className="sign-button"
               >
                 <span style={{  }}>Sign </span>
                 
