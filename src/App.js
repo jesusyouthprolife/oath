@@ -19,6 +19,10 @@ function App() {
     getSignCount((count) => setSignCount(count));
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pageNo]);
+
   return <ActivePage goNextPage={goNextPage} signCount={signCount} />;
 }
 
