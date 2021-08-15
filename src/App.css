@@ -62,6 +62,9 @@ a {
 .footer span {
   padding: 0px 12px;
 }
+.footer br {
+  display: none;
+}
 
 small {
   color: #767676;
@@ -229,6 +232,18 @@ small {
   .home-button,
   .pledge-button {
     font-size: 16px !important;
+  }
+
+  .footer {
+    align-self: flex-start;
+    padding-left: 5%;
+  }
+
+  .footer span {
+    display: none;
+  }
+  .footer br {
+    display: block;
   }
 }
 
