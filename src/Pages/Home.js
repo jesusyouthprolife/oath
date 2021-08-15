@@ -21,10 +21,9 @@ function Home({ goNextPage, signCount }) {
           <p className="heading-text">15.6 million</p>
           <p className="content-text">
             That's the number of unborns aborted every year in India alone. 
-            They deserve a chance
-            to live and the change starts with you. Your prayers and actions go
-            a long way in promoting a culture of life.
-            Take the prolife oath today to get started.
+            They deserve a chance to live and the change starts with you - 
+            your prayers and actions go a long way in promoting a culture 
+            of life. Take the prolife oath today to get started.
           </p>
           <button
             type="submit"
