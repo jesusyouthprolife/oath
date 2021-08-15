@@ -20,7 +20,7 @@ function Home({ goNextPage, signCount }) {
         <>
           <p className="heading-text">15.6 million</p>
           <p className="content-text">
-            That's the number of unborns aborted, in India alone, every year. 
+            That's the number of unborns aborted every year in India alone. 
             They deserve a chance
             to live and the change starts with you. Your prayers and actions go
             a long way in promoting a culture of life.
@@ -51,7 +51,7 @@ function Home({ goNextPage, signCount }) {
               }}
             />          
           </button>
-          <small>{signCount > 0 ? <>{signCount} people have taken the oath so far</> : <>&nbsp;</>}</small>
+          <small>{signCount > 0 ? <span class="lazy">{signCount} people have taken the oath so far</span> : <>&nbsp;</>}</small>
         </>
       }
     />

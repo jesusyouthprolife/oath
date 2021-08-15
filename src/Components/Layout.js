@@ -7,10 +7,7 @@ function Layout({ left, right }) {
           <div className="right">{right}</div>
         </div>
         <div className="footer">
-          <b>Contact us</b>
-          <span>&bull;</span>
-          <br />
-          <b>Email:</b>{" "}
+          <b>Email us:</b>{" "}
           <a href="mailto:jyindiaprolife@gmail.com">jyindiaprolife@gmail.com</a>
           <span>&bull;</span>
           <br />
