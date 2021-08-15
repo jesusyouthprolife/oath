@@ -10,10 +10,12 @@
 body {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
-  color: #C8C8C8;
+  color: #c8c8c8;
 }
 
-input, button, .form-control {
+input,
+button,
+.form-control {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   padding: 4px 8px;
@@ -114,11 +116,11 @@ small {
   width: 200px;
   height: 200px;
   /* background-color: white; */
-  background-image: url('assets/oath-b1.png');
+  background-image: url("assets/oath-b1.png");
 }
 
 .done {
-  background-image: url('assets/oath-b2.png');
+  background-image: url("assets/oath-b2.png");
 }
 
 .main-form {
@@ -146,7 +148,6 @@ small {
   padding: 16px 0px;
   background: transparent;
 }
-
 
 .main-form-top input:focus {
   outline: none;
@@ -206,7 +207,9 @@ small {
   .main-form-bottom {
     display: unset;
   }
-  .content-text, input, label {
+  .content-text,
+  input,
+  label {
     font-size: 16px;
   }
 
@@ -239,7 +242,6 @@ button {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 2px;
-
 }
 
 .home-button {
@@ -250,6 +252,11 @@ button {
 .pledge-button {
   background: white;
   color: black;
+}
+
+.done-button {
+  color: white;
+  background: black;
 }
 
 .done-page .container {
