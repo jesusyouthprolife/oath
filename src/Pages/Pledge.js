@@ -40,7 +40,7 @@ function Pledge({ goNextPage }) {
               zIndex: 2,
             }}
             onClick={goNextPage}
-            className="home-button"
+            className="pledge-button"
           >
             <span style={{ zIndex: 5 }}>Sign my name</span>
             <animated.div

@@ -41,7 +41,8 @@ export const getSignCount = (callback) => {
     ...requestOptions,
   };
 
-  fetch("https://www.prolifearmy.org/api/web/oath", getRequestOptions)
+  const rand = new Date().getTime();
+  fetch("https://www.prolifearmy.org/api/web/oath?" + rand , getRequestOptions)
     .then((response) => response.json())
     .then(({ count }) => callback(count));
 };

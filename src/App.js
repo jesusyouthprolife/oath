@@ -8,13 +8,13 @@ import Done from "./Pages/Done";
 
 const pages = [Home, Pledge, Sign, Done];
 function App() {
-  const [signCount, setSignCount] = useState(0);
-  getSignCount((count) => setSignCount(count));
-
   const [pageNo, setPageNo] = useState(0);
   const ActivePage = pages[pageNo];
 
   const goNextPage = () => setPageNo(pageNo + 1);
+
+  const [signCount, setSignCount] = useState(0);
+  getSignCount((count) => setSignCount(count));
 
   return <ActivePage goNextPage={goNextPage} signCount={signCount} />;
 }

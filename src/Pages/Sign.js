@@ -2,7 +2,7 @@ import Layout from "../Components/Layout";
 import { sendFeedback } from "../api";
 import ClipLoader from "react-spinners/ClipLoader";
 import { css } from "@emotion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { animated, useSpring, config } from "react-spring";
@@ -15,6 +15,7 @@ const override = css`
 
 function Sign({ goNextPage }) {
   const [loading, setLoading] = useState(false);
+  const [painted, setPainted] = useState(false);
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
@@ -44,12 +45,19 @@ function Sign({ goNextPage }) {
 
   const transform = (e) => `scale(${e})`;
 
+  useEffect(() => {
+    if (!painted) {
+      document.getElementById("name").focus();
+      setPainted(true);
+    }
+  })
+
   return (
     <Layout
       left={<div className="circle"></div>}
       right={
         <>
-          <p className="heading-text">Sign my name</p>
+          {/* <p className="heading-text">Sign the oath</p> */}
           <form
             className="main-form"
             onSubmit={(e) => {
@@ -75,26 +83,29 @@ function Sign({ goNextPage }) {
             }}
           >
             <div className="main-form-top">
-              <label>
-              <span>Name <i>(required)</i></span>
+              <label>Signed by:
                 <input
+                  id="name"
                   value={formValues.name}
-                  required
                   type="text"
+                  placeholder="Type your name here"
+                  required
+                  class="heading-text"
                   onChange={(e) => setField("name", e.target.value)}
                 />
               </label>
+            </div>
+            <div class="prompt">Would you like to share some additional details with us so that we can reach out to you with future initiatives? 
+            We don't sell your information to third parties.</div>
+            <div className="main-form-bottom">
               <label>
-                <span>Email <i>(required)</i></span>
+                <span>Email</span>
                 <input
                   value={formValues.email}
-                  required
                   type="email"
                   onChange={(e) => setField("email", e.target.value)}
                 />
               </label>
-            </div>
-            <div className="main-form-bottom">
               <label>
                 Phone
                 <PhoneInput
@@ -134,11 +145,10 @@ function Sign({ goNextPage }) {
                 type="submit"
                 style={{
                   position: "relative",
-                  zIndex: 2,
                 }}
                 className="pledge-button"
               >
-                <span style={{ zIndex: 5 }}>Sign </span>
+                <span style={{  }}>Sign </span>
                 <animated.div
                   style={{
                     position: "absolute",
@@ -149,7 +159,6 @@ function Sign({ goNextPage }) {
                     width: "100%",
                     height: "100%",
                     borderRadius: "50px",
-                    zIndex: 1,
                     opacity,
                   }}
                 />

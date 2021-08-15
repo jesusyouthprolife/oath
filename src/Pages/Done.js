@@ -9,10 +9,10 @@ function Done({signCount}) {
           <>
             <p className="heading-text">Thank you for standing up for life!</p>
             <p className="content-text">
-              You are joined by {signCount} others in raising their voices on all actions against the dignity of human life. 
+              You are joined by {signCount - 1} others in raising their voices on actions against the dignity of human life. 
             </p>
             <p className="content-text">
-              Please spread the message among and your friends and family and encourage them to take the oath!
+              Please spread the message among your friends and family and encourage them to take the oath!
             </p>
           </>
         }

@@ -1,7 +1,7 @@
 import Layout from "../Components/Layout";
 import { animated, useSpring, config } from "react-spring";
 
-function Home({ goNextPage }) {
+function Home({ goNextPage, signCount }) {
   const [{ scale, opacity }] = useSpring(() => ({
     // https://react-spring.io/common/props#props
     from: { scale: 1, opacity: 0.3 },
@@ -49,8 +49,9 @@ function Home({ goNextPage }) {
                 zIndex: 1,
                 opacity,
               }}
-            />
+            />          
           </button>
+          <small>{signCount > 0 ? <>{signCount} people have taken the oath so far</> : <>&nbsp;</>}</small>
         </>
       }
     />
