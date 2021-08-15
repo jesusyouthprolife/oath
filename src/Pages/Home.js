@@ -50,7 +50,7 @@ function Home({ goNextPage, signCount }) {
               }}
             />          
           </button>
-          <small>{signCount > 0 ? <span class="lazy">{signCount} people have taken the oath so far</span> : <>&nbsp;</>}</small>
+          <small>{signCount > 0 ? <span className="lazy">{signCount} people have taken the oath so far</span> : <>&nbsp;</>}</small>
         </>
       }
     />
