@@ -95,8 +95,8 @@ function Sign({ goNextPage }) {
                 />
               </label>
             </div>
-            <div class="prompt">Would you like to share some additional details with us so that we can reach out to you with future initiatives? 
-            We don't sell your information to third parties.</div>
+            <div class="prompt">Would you like to share some additional details with us so that we can reach out to you for future initiatives? 
+            We don't share your information with third parties and filling this section is completely optional.</div>
             <div className="main-form-bottom">
               <label>
                 <span>Email</span>
@@ -132,7 +132,7 @@ function Sign({ goNextPage }) {
                 />
               </label>
               <label>
-                Region
+                State/Region
                 <input
                   value={formValues.region}
                   type="text"
@@ -149,6 +149,16 @@ function Sign({ goNextPage }) {
                 className="pledge-button"
               >
                 <span style={{  }}>Sign </span>
+                
+                {loading && (
+                  <ClipLoader
+                    color={"#000"}
+                    loading={true}
+                    size={150}
+                    css={override}
+                  />
+                )}
+                
                 <animated.div
                   style={{
                     position: "absolute",
@@ -163,14 +173,6 @@ function Sign({ goNextPage }) {
                   }}
                 />
               </button>
-              {loading && (
-                <ClipLoader
-                  color={"#fff"}
-                  loading={true}
-                  size={150}
-                  css={override}
-                />
-              )}
             </div>
           </form>
         </>
