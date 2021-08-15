@@ -50,7 +50,7 @@ function Sign({ goNextPage }) {
       document.getElementById("name").focus();
       setPainted(true);
     }
-  })
+  }, [painted])
 
   return (
     <Layout

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getSignCount } from "./api";
 import "./App.css";
 import Home from "./Pages/Home";
@@ -14,7 +14,10 @@ function App() {
   const goNextPage = () => setPageNo(pageNo + 1);
 
   const [signCount, setSignCount] = useState(0);
-  getSignCount((count) => setSignCount(count));
+  
+  useEffect(() => {
+    getSignCount((count) => setSignCount(count));
+  }, []);
 
   return <ActivePage goNextPage={goNextPage} signCount={signCount} />;
 }
