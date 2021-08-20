@@ -21,18 +21,22 @@ function Pledge({ goNextPage }) {
         <>
           <p className="heading-text">The ProLife Oath</p>
           <p className="content-text">
-          {`As a member of the human race, the Crown of God's creation, I 
-          solemnly pledge my life to the service of God and humanity; I will
-          obey the Word of God and live in accordance with the Magisterial
-          teachings of the Catholic Church; I will lead my life according to
-          God's wonderful plan about love, sexuality, celibacy, marriage, family
-          & human life; I will maintain the utmost respect for human life from
-          the time of conception till natural death; In my capacity I will not
-          permit the evils of contraception, sterilisation, abortion, artificial
-          reproductive technology & euthanasia; I make these promises solemnly,
-          freely, and upon my honour.`}
+            As a member of the human race, the Crown of God's creation and as a
+            committed Christian. I (full name) solemnly pledge my life to the
+            service of God and humanity; I will obey the Word of God and live in
+            accordance with the Magisterial teachings of the Catholic Church; I
+            will lead my life according to God's wonderful plan about love,
+            sexuality, celibacy, marriage, family &amp; human life; I will maintain
+            the utmost respect for human life from the time of conception till
+            natural death; In my capacity I will not permit the evils of
+            contraception, sterilisation, abortion, artificial reproductive
+            technology &amp; euthanasia; I make these promises solemnly, freely, and
+            upon my honour and May God the almighty, the beginning and the end,
+            help me to fulfil these promises with His all powerful help.
+            <br /><br />
+            Amen.
           </p>
-          
+
           <button
             type="submit"
             style={{
